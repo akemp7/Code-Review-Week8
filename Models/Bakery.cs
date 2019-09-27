@@ -45,6 +45,15 @@ namespace BakeryOrder
         {
             Console.WriteLine("How many pastries would you like?");
             string pastries = Console.ReadLine();
+            int pastryAmount = int.Parse(pastries);
+            if(pastryAmount < 3)
+            {
+                Cost = 2;
+            }
+            else if(pastryAmount < pastryAmount * 3)
+            {
+                Console.WriteLine(Cost = 5*(pastryAmount)/3);
+            }
 
         }
             
