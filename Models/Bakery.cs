@@ -2,13 +2,21 @@ using System;
 using System.Collections.Generic;
 namespace BakeryOrder
 {
-    class Bread
+    public class Ordering
     {
         public int Cost {get;set;}
-        public Bread(int cost)
+        public Ordering(int cost)
         {
             Cost = cost;
         }
+    }
+    class Bread: Ordering
+    {
+        // public int Cost {get;set;}
+        public Bread(int cost);
+        // {
+            // Cost = cost;
+        // }
         public void BreadOrder()
         {
                Console.WriteLine("How many loaves would you like?");
