@@ -11,7 +11,7 @@ class Program
         if(userInput == "1")
         {
            Bread newBread = new Bread(0);
-           newBread.BreadOrder();
+           newBread.BreadType();
         }
         else if(userInput == "2")
         {

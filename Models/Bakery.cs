@@ -2,21 +2,28 @@ using System;
 using System.Collections.Generic;
 namespace BakeryOrder
 {
-    public class Ordering
+    class Bread
     {
         public int Cost {get;set;}
-        public Ordering(int cost)
+        public Bread(int cost)
         {
             Cost = cost;
         }
-    }
-    class Bread: Ordering
-    {
-        // public int Cost {get;set;}
-        public Bread(int cost);
-        // {
-            // Cost = cost;
-        // }
+
+        public void BreadType()
+        {
+            Console.WriteLine("Do you have a specific bread in mind? [Choose Y/N]");
+            string userPreference = Console.ReadLine();
+            if(userPreference == "Y" || userPreference == "y")
+            {
+                Console.WriteLine("We have sourdough, multigrain, and rye.");
+            }
+            else
+            {
+                BreadOrder();
+            }
+
+        }
         public void BreadOrder()
         {
                Console.WriteLine("How many loaves would you like?");
@@ -33,7 +40,7 @@ namespace BakeryOrder
                   Cost = 10*(loafAmount)/2;
                   Console.WriteLine("The cost is " + Cost + " dollars. Please pay.");
                 }
-                else
+                else 
                 {
                 Console.WriteLine("It's free!");
                 }
@@ -60,7 +67,7 @@ namespace BakeryOrder
             }
             else if(pastryAmount < pastryAmount * 3)
             {
-                Cost = 5*(pastryAmount)/3;
+                Cost = 5*(pastryAmount)/3; 
                 Console.WriteLine("The cost is " + Cost + " dollars. Please pay.");
             }
             else
