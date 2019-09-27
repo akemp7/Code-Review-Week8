@@ -13,12 +13,23 @@ namespace BakeryOrder
         {
                Console.WriteLine("How many loaves would you like?");
                 string loaves = Console.ReadLine();
-                BreadCost();
+                int loafAmount = int.Parse(loaves);
+                if(loafAmount == 1)
+                {
+                    Cost = 5;
+                    Console.WriteLine("The cost is " + Cost + " dollars. Please pay.");
+                }
+              
+                else if(loafAmount < loafAmount*2)
+                {
+                   Console.WriteLine(Cost = 10*(loafAmount)/2);
+
+                }
+                else
+                {
+                    Console.WriteLine("It's free!");
+                }
         
-        }
-        public void BreadCost()
-        {
-            Console.WriteLine("This is the cost of bread.");
         }
     }
 
@@ -35,10 +46,6 @@ namespace BakeryOrder
             Console.WriteLine("How many pastries would you like?");
             string pastries = Console.ReadLine();
 
-        }
-        public void PastryCost()
-        {
-            Console.WriteLine("This is the price of pastries.");
         }
             
     }
