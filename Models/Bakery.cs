@@ -2,10 +2,17 @@ using System;
 using System.Collections.Generic;
 namespace BakeryOrder
 {
-    class Bread
-    {
+    class Food {
         public int Cost {get;set;}
-        public Bread(int cost)
+        public Food(int cost)
+        {
+            Cost = cost;
+        }
+
+    }
+    class Bread: Food
+    {
+        public Food(int cost)
         {
             Cost = cost;
         }
@@ -33,13 +40,8 @@ namespace BakeryOrder
         }
     }
 
-    class Pastry
+    class Pastry : Food
     {
-        public int Cost {get;set;}
-        public Pastry (int cost)
-        {
-            Cost = cost;
-        }
 
         public void PastryOrder()
         {
