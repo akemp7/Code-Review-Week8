@@ -48,13 +48,13 @@ namespace BakeryOrder
 
         public void BreadChoice()
         {
-              Console.WriteLine("Our specials today sourdough, multigrain, and rye.");
+              Console.WriteLine("Our specials today are sourdough, multigrain, and rye.");
                 Console.WriteLine("Our sourdough is usually $240, but today it is only $200. Multigrain and rye are both $750. These prices are exclusive of our current deal. Are you stil insterested? [Y/N]");
                 string choice = Console.ReadLine();
 
                 if(choice == "y" || choice == "Y")
                 {
-                    Console.WriteLine("It really isn't the best deal in the world! I would suggest going to another bakery.");
+                    Console.WriteLine("It really isn't the best deal in the world! I would suggest going to another bakery where they will not over charge you.");
                 }
                 else
                 {
