@@ -7,7 +7,7 @@ namespace BakeryOrder
         public int Cost {get;set;}
         public Bread(int cost)
         {
-            Cost = cost;
+            Cost = 5;
         }
         public void BreadOrder()
         {
@@ -16,7 +16,7 @@ namespace BakeryOrder
                 int loafAmount = int.Parse(loaves);
                 if(loafAmount == 1)
                 {
-                    Cost = 5;
+                    Cost = Cost;
                     Console.WriteLine("The cost is " + Cost + " dollars. Please pay.");
                 }
               
@@ -37,7 +37,7 @@ namespace BakeryOrder
         public int Cost {get;set;}
         public Pastry (int cost)
         {
-            Cost = cost;
+            Cost = 2;
         }
 
         public void PastryOrder()
@@ -47,7 +47,7 @@ namespace BakeryOrder
             int pastryAmount = int.Parse(pastries);
             if(pastryAmount < 3)
             {
-                Cost = 2;
+                Cost = pastryAmount * Cost;
                 Console.WriteLine("The cost is " + Cost + " dollars. Please pay.");
             }
             else if(pastryAmount < pastryAmount * 3)
