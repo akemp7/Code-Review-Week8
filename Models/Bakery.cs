@@ -32,13 +32,13 @@ namespace BakeryOrder
                 if(loafAmount == 1)
                 {
                     Cost = 5;
-                    Console.WriteLine("The cost is " + Cost + " dollars. Please pay.");
+                    Console.WriteLine("The cost is " + Cost + " dollars. Please pay when you are ready.");
                 }
               
                 else if(loafAmount < loafAmount*2)
                 {
                   Cost = 10*(loafAmount)/2;
-                  Console.WriteLine("The cost is " + Cost + " dollars. Please pay.");
+                  Console.WriteLine("The cost is " + Cost + " dollars. Please pay when you are ready.");
                 }
                 else 
                 {
@@ -80,12 +80,12 @@ namespace BakeryOrder
             if(pastryAmount < 3)
             {
                 Cost = pastryAmount * Cost;
-                Console.WriteLine("The cost is " + Cost + " dollars. Please pay.");
+                Console.WriteLine("The cost is " + Cost + " dollars. Please pay for your pastry(ies).");
             }
             else if(pastryAmount < pastryAmount * 3)
             {
                 Cost = 5*(pastryAmount)/3; 
-                Console.WriteLine("The cost is " + Cost + " dollars. Please pay.");
+                Console.WriteLine("The cost is " + Cost + " dollars. Please pay for your pastry(ies).");
             }
             else
             {
